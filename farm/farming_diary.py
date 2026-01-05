@@ -14,24 +14,29 @@ Kullanılan sınıflar:
 from farm.cow import Cow
 from farm.chicken import Chicken
 
-print("\n\n📝 Üçüncü Gün: Hayvanlar Konuşuyor")
+print("\n\n📝 Day Three: Animals Talk")
 
 # 1. Kodu okuyun ve sınıfları kodlamak için bazı ipuçları toplayın.
 cow = Cow()
 female_chicken = Chicken('female')
 male_chicken = Chicken('male')
 
-print(f"İnek {cow.talk()} diyor.")
-print(f"Dişi tavuk {female_chicken.talk()} diyor.")
-print(f"Erkek tavuk {male_chicken.talk()} diyor")
+print(f"The cow says {cow.talk()}")
+print(f"The female chicken says {female_chicken.talk()}")
+print(f"The male chicken says {male_chicken.talk()}")
 
-print("\n\n📝 Dördüncü Gün: Hayvanları Besle")
+print("\n\n📝 Day Four: Feed The Animals")
 
 # 1. Tüm hayvanlarını `animals` listesinde sakla
-pass  # BURAYA KODUNU YAZ
+# $CHALLENGIFY_BEGIN
+animals = [cow, female_chicken, male_chicken]
+# $CHALLENGIFY_END
 
 # 2. Her hayvan için `feed` yöntemini çağır (liste üzerinde bir döngü kullan)
-pass  # BURAYA KODUNU YAZ
+# $CHALLENGIFY_BEGIN
+for animal in animals:
+    animal.feed()
+# $CHALLENGIFY_END
 
 # 3. TODO'ları değiştirin
 
@@ -39,4 +44,8 @@ pass  # BURAYA KODUNU YAZ
 # "The cow produced ## liters of milk"
 # "The female chicken produced ## eggs"
 # "The male chicken produced ## eggs"
-pass  # KODUNUZ BURAYA
+# $CHALLENGIFY_BEGIN
+print(f"The cow produced {cow.milk} liters of milk")
+print(f"The female chicken produced {female_chicken.eggs} eggs")
+print(f"The male chicken produced {male_chicken.eggs} eggs")
+# $CHALLENGIFY_END
